@@ -12,9 +12,9 @@ export default class LogoView extends React.PureComponent {
     return (
       <div id="dummy-view">
         <div>
-          <a href="https://github.com/tinode/chat/">
-            <img id="logo" alt="logo" src="img/logo.svg" />
-            <h2>Tinode Web</h2>
+          <a>
+            <img id="logo" alt="Geia Messaging" src="img/geia-logo.png" />
+            <h2>Geia Messaging</h2>
           </a>
           <p><FormattedMessage id="label_client" defaultMessage="Client:"
             description="Label for a client version" /> {version}</p>

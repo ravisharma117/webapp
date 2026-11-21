@@ -11,18 +11,22 @@ export default class AccSupportView extends React.PureComponent {
     return (
       <div className="scrollable-panel">
         <div className="panel-form-column">
-          <a href={LINK_CONTACT_US} className="flat-button" target="_blank" rel="noopener noreferrer">
-            <i className="material-icons">email</i> &nbsp;<FormattedMessage id="link_contact_us"
-              defaultMessage="Contact Us" description="Ancor text for contacting us by email" />
-          </a>
-          <a href={LINK_TERMS_OF_SERVICE} className="flat-button" target="_blank" rel="noopener noreferrer">
-            <i className="material-icons">description</i> &nbsp;<FormattedMessage id="link_terms_of_service"
-              defaultMessage="Terms of Service" description="Ancor text for terms of service link" />
-          </a>
-          <a href={LINK_PRIVACY_POLICY} className="flat-button" target="_blank" rel="noopener noreferrer">
-            <i className="material-icons">policy</i> &nbsp;<FormattedMessage id="link_privacy_policy"
-              defaultMessage="Privacy Policy" description="Ancor text for privacy policy link" />
-          </a>
+          {/* A link is shown only when it is configured in config.js (empty = hidden). */}
+          {LINK_CONTACT_US ?
+            <a href={LINK_CONTACT_US} className="flat-button" target="_blank" rel="noopener noreferrer">
+              <i className="material-icons">email</i> &nbsp;<FormattedMessage id="link_contact_us"
+                defaultMessage="Contact Us" description="Ancor text for contacting us by email" />
+            </a> : null}
+          {LINK_TERMS_OF_SERVICE ?
+            <a href={LINK_TERMS_OF_SERVICE} className="flat-button" target="_blank" rel="noopener noreferrer">
+              <i className="material-icons">description</i> &nbsp;<FormattedMessage id="link_terms_of_service"
+                defaultMessage="Terms of Service" description="Ancor text for terms of service link" />
+            </a> : null}
+          {LINK_PRIVACY_POLICY ?
+            <a href={LINK_PRIVACY_POLICY} className="flat-button" target="_blank" rel="noopener noreferrer">
+              <i className="material-icons">policy</i> &nbsp;<FormattedMessage id="link_privacy_policy"
+                defaultMessage="Privacy Policy" description="Ancor text for privacy policy link" />
+            </a> : null}
         </div>
         <div className="hr" />
         <div className="panel-form-column">

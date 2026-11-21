@@ -1,18 +1,19 @@
 import { PACKAGE_VERSION } from './version.js';
 
-// Version-independent name of this application, used for Firebase app name.
-export const BASE_APP_NAME = 'TinodeWeb';
+// Version-independent name of this application, used for Firebase app name and in the User-Agent.
+export const BASE_APP_NAME = 'GeiaMessaging';
 // Name of this application, used in the User-Agent.
 export const APP_NAME = BASE_APP_NAME + '/' + (PACKAGE_VERSION || '0.25');
 
 // API key. Use https://github.com/tinode/chat/tree/master/keygen to generate your own
 export const API_KEY = 'AQEAAAABAAD_rAp4DJh05a1HAwFT3A6K';
 
-// The array of possible hosts to connect to.
-export const KNOWN_HOSTS = {hosted: 'web.tinode.co', local: 'localhost:6060'};
+// Suggested hosts in the server address box (Settings). Geia Messaging is a private deployment: the app
+// connects to the server it is served from (see lib/host-name.js), so only localhost (development) is listed.
+export const KNOWN_HOSTS = {local: 'localhost:6060'};
 
 // Default host name and port to connect to.
-export const DEFAULT_HOST = KNOWN_HOSTS.hosted;
+export const DEFAULT_HOST = KNOWN_HOSTS.local;
 
 // Enable console logging.
 export const LOGGING_ENABLED = true;
@@ -115,14 +116,16 @@ export const MIN_DURATION = 2_000;
 // Maximum duration of an audio recording in milliseconds (10 min).
 export const MAX_DURATION = 600_000;
 
-// Link for "Contact Us".
-export const LINK_CONTACT_US = 'mailto:support@tinode.co';
+// Links shown in Settings > Support. Empty string = the button is hidden.
+// TODO(client): fill in once the client provides the addresses (tracker items C17 / contact email).
+// Link for "Contact Us", e.g. 'mailto:support@<geia domain>'.
+export const LINK_CONTACT_US = '';
 
 // Link to Privacy Policy.
-export const LINK_PRIVACY_POLICY = 'https://tinode.co/privacy.html';
+export const LINK_PRIVACY_POLICY = '';
 
 // Link to Terms of Service.
-export const LINK_TERMS_OF_SERVICE = 'https://tinode.co/terms.html';
+export const LINK_TERMS_OF_SERVICE = '';
 
 // When user starts a P2P topic, automatic subscription does not
 // happen until the first message. Setting this option to true enables
