@@ -117,7 +117,7 @@ export const MIN_DURATION = 2_000;
 export const MAX_DURATION = 600_000;
 
 // Links shown in Settings > Support. Empty string = the button is hidden.
-// TODO(client): fill in once the client provides the addresses (tracker items C17 / contact email).
+// TODO(client): fill in once the client provides the addresses (tracker items C13 / contact email).
 // Link for "Contact Us", e.g. 'mailto:support@<geia domain>'.
 export const LINK_CONTACT_US = '';
 
